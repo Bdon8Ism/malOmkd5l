@@ -1,19 +1,11 @@
 ﻿﻿const Discord = require('discord.js');
 
-const Util = require('discord.js');
-
-const ytdl = require('ytdl-core');
-
-const fs = require('fs'); 
-
-const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-var prefix = "B!";
 
 
-const coolDown = new Set();
+
 
 
 ///////////////////////// 
